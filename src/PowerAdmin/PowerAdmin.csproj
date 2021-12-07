@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PowerAdmin.Business.Identity\PowerAdmin.Business.Identity.csproj" />
     <ProjectReference Include="..\PowerAdmin.Common\PowerAdmin.Common.csproj" />
+    <ProjectReference Include="..\PowerAdmin.EntityFramework.Postgres\PowerAdmin.EntityFramework.Postgres.csproj" />
   </ItemGroup>
 
 </Project>

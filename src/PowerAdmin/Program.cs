@@ -1,3 +1,6 @@
+using PowerAdmin.EntityFramework.Identity.DbContext;
+using PowerAdmin.EntityFramework.Postgres.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // 配置 Furion
@@ -6,6 +9,9 @@ builder.Inject();
 // Add services to the container.
 
 var services = builder.Services;
+
+// 添加数据库上下文
+services.AddPostgresDbContext<UserIdentityDbContext>();
 
 services.AddControllers();
 
