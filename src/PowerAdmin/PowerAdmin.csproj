@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PowerAdmin.Business.Identity\PowerAdmin.Business.Identity.csproj" />
     <ProjectReference Include="..\PowerAdmin.Common\PowerAdmin.Common.csproj" />
   </ItemGroup>
 

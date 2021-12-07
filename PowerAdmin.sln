@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerAdmin.UnitTests", "tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerAdmin.EntityFramework.Identity", "src\PowerAdmin.EntityFramework.Identity\PowerAdmin.EntityFramework.Identity.csproj", "{813E13E1-3B82-4427-B146-D892E65EEF2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerAdmin.Business.Identity", "src\PowerAdmin.Business.Identity\PowerAdmin.Business.Identity.csproj", "{03140933-3E93-47B8-9359-6C92C4E5516A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{813E13E1-3B82-4427-B146-D892E65EEF2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{813E13E1-3B82-4427-B146-D892E65EEF2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{813E13E1-3B82-4427-B146-D892E65EEF2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03140933-3E93-47B8-9359-6C92C4E5516A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03140933-3E93-47B8-9359-6C92C4E5516A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03140933-3E93-47B8-9359-6C92C4E5516A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03140933-3E93-47B8-9359-6C92C4E5516A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{A2290471-D455-4FA0-A4BA-816A54F8FA73} = {6D6273A6-5B48-48C5-8C4E-A646E9E65243}
 		{A825CB02-160E-4213-AC1B-85DF60BD2D8A} = {6D6273A6-5B48-48C5-8C4E-A646E9E65243}
 		{813E13E1-3B82-4427-B146-D892E65EEF2C} = {FF638996-BDAF-49C4-9B44-4B5FAEC6015A}
+		{03140933-3E93-47B8-9359-6C92C4E5516A} = {FF638996-BDAF-49C4-9B44-4B5FAEC6015A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF73E187-3027-460C-9405-BC85ACBDCF53}
