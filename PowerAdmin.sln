@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerAdmin", "PowerAdmin\PowerAdmin.csproj", "{7ECFE165-672C-42BB-B2AB-813949F3FFFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerAdmin", "src\PowerAdmin\PowerAdmin.csproj", "{7ECFE165-672C-42BB-B2AB-813949F3FFFD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerAdmin.Common", "src\PowerAdmin.Common\PowerAdmin.Common.csproj", "{56FD7196-E0B2-480B-BB73-E30FE4C0A95B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FF638996-BDAF-49C4-9B44-4B5FAEC6015A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6D6273A6-5B48-48C5-8C4E-A646E9E65243}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerAdmin.IntegrationTests", "tests\PowerAdmin.IntegrationTests\PowerAdmin.IntegrationTests.csproj", "{A2290471-D455-4FA0-A4BA-816A54F8FA73}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerAdmin.UnitTests", "tests\PowerAdmin.UnitTests\PowerAdmin.UnitTests.csproj", "{A825CB02-160E-4213-AC1B-85DF60BD2D8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerAdmin.EntityFramework.Identity", "src\PowerAdmin.EntityFramework.Identity\PowerAdmin.EntityFramework.Identity.csproj", "{813E13E1-3B82-4427-B146-D892E65EEF2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +27,32 @@ Global
 		{7ECFE165-672C-42BB-B2AB-813949F3FFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ECFE165-672C-42BB-B2AB-813949F3FFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7ECFE165-672C-42BB-B2AB-813949F3FFFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56FD7196-E0B2-480B-BB73-E30FE4C0A95B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56FD7196-E0B2-480B-BB73-E30FE4C0A95B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56FD7196-E0B2-480B-BB73-E30FE4C0A95B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56FD7196-E0B2-480B-BB73-E30FE4C0A95B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2290471-D455-4FA0-A4BA-816A54F8FA73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2290471-D455-4FA0-A4BA-816A54F8FA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2290471-D455-4FA0-A4BA-816A54F8FA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2290471-D455-4FA0-A4BA-816A54F8FA73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A825CB02-160E-4213-AC1B-85DF60BD2D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A825CB02-160E-4213-AC1B-85DF60BD2D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A825CB02-160E-4213-AC1B-85DF60BD2D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A825CB02-160E-4213-AC1B-85DF60BD2D8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{813E13E1-3B82-4427-B146-D892E65EEF2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{813E13E1-3B82-4427-B146-D892E65EEF2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{813E13E1-3B82-4427-B146-D892E65EEF2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{813E13E1-3B82-4427-B146-D892E65EEF2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7ECFE165-672C-42BB-B2AB-813949F3FFFD} = {FF638996-BDAF-49C4-9B44-4B5FAEC6015A}
+		{56FD7196-E0B2-480B-BB73-E30FE4C0A95B} = {FF638996-BDAF-49C4-9B44-4B5FAEC6015A}
+		{A2290471-D455-4FA0-A4BA-816A54F8FA73} = {6D6273A6-5B48-48C5-8C4E-A646E9E65243}
+		{A825CB02-160E-4213-AC1B-85DF60BD2D8A} = {6D6273A6-5B48-48C5-8C4E-A646E9E65243}
+		{813E13E1-3B82-4427-B146-D892E65EEF2C} = {FF638996-BDAF-49C4-9B44-4B5FAEC6015A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF73E187-3027-460C-9405-BC85ACBDCF53}

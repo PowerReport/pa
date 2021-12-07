@@ -10,4 +10,8 @@
     <PackageReference Include="Furion" Version="3.0.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PowerAdmin.Common\PowerAdmin.Common.csproj" />
+  </ItemGroup>
+
 </Project>
