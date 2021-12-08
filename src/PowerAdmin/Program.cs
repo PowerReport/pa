@@ -22,6 +22,9 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 
+// 数据库迁移
+app.EnsureDatabasesMigrated<UserIdentityDbContext>();
+
 app.UseAuthorization();
 
 // 使用 Furion 中间件
