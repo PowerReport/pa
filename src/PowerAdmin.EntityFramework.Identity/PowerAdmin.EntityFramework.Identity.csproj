@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PowerAdmin.EntityFramework.Shared\PowerAdmin.EntityFramework.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

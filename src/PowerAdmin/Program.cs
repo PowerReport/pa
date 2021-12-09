@@ -1,5 +1,5 @@
 using PowerAdmin.EntityFramework.Configuration.Extensions;
-using PowerAdmin.EntityFramework.Identity.DbContext;
+using PowerAdmin.EntityFramework.Shared.DbContexts;
 
 var builder = WebApplication.CreateBuilder(args);
 
