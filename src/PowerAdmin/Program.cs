@@ -1,3 +1,4 @@
+using PowerAdmin.Business.Identity.Extensions;
 using PowerAdmin.EntityFramework.Configuration.Extensions;
 using PowerAdmin.EntityFramework.Shared.DbContexts;
 
@@ -12,6 +13,9 @@ var services = builder.Services;
 
 // 添加数据库上下文
 services.AddDbContexts<UserIdentityDbContext>();
+
+// 添加用户身份服务
+services.AddIdentityServices();
 
 services.AddControllers();
 

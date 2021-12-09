@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PowerAdmin.Business.Identity.Services.Interfaces;
 
 namespace PowerAdmin.Controllers
 {
@@ -7,10 +8,17 @@ namespace PowerAdmin.Controllers
     [ApiController]
     public class ProfileController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult GetProfile()
+        private readonly IIdentityService identityService;
+
+        public ProfileController(IIdentityService identityService)
         {
-            throw new NotImplementedException();
+            this.identityService = identityService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetProfile()
+        {
+            return Ok(await identityService.GetProfile(User));
         }
     }
 }
