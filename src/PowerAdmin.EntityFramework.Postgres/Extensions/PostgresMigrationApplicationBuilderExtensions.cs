@@ -11,7 +11,7 @@ namespace PowerAdmin.EntityFramework.Postgres.Extensions
 {
     public static class PostgresMigrationApplicationBuilderExtensions
     {
-        public static IApplicationBuilder EnsureDatabasesMigrated<TUserIdentityDbContext>(this IApplicationBuilder app)
+        public static IApplicationBuilder PostgresEnsureDatabasesMigrated<TUserIdentityDbContext>(this IApplicationBuilder app)
             where TUserIdentityDbContext : DbContext
         {
             using (var userIdentityDbContext = App.GetRequiredService<TUserIdentityDbContext>())

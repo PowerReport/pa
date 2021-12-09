@@ -15,11 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerAdmin.IntegrationTests
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerAdmin.UnitTests", "tests\PowerAdmin.UnitTests\PowerAdmin.UnitTests.csproj", "{A825CB02-160E-4213-AC1B-85DF60BD2D8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerAdmin.EntityFramework.Identity", "src\PowerAdmin.EntityFramework.Identity\PowerAdmin.EntityFramework.Identity.csproj", "{813E13E1-3B82-4427-B146-D892E65EEF2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerAdmin.EntityFramework.Identity", "src\PowerAdmin.EntityFramework.Identity\PowerAdmin.EntityFramework.Identity.csproj", "{813E13E1-3B82-4427-B146-D892E65EEF2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerAdmin.Business.Identity", "src\PowerAdmin.Business.Identity\PowerAdmin.Business.Identity.csproj", "{03140933-3E93-47B8-9359-6C92C4E5516A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerAdmin.Business.Identity", "src\PowerAdmin.Business.Identity\PowerAdmin.Business.Identity.csproj", "{03140933-3E93-47B8-9359-6C92C4E5516A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerAdmin.EntityFramework.Postgres", "src\PowerAdmin.EntityFramework.Postgres\PowerAdmin.EntityFramework.Postgres.csproj", "{8B723FC4-92BC-4871-B363-22D3ACA627A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerAdmin.EntityFramework.Postgres", "src\PowerAdmin.EntityFramework.Postgres\PowerAdmin.EntityFramework.Postgres.csproj", "{8B723FC4-92BC-4871-B363-22D3ACA627A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerAdmin.EntityFramework.Configuration", "src\PowerAdmin.EntityFramework.Configuration\PowerAdmin.EntityFramework.Configuration.csproj", "{F13135E4-6280-4DB6-9CA4-A9BA1097D273}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{8B723FC4-92BC-4871-B363-22D3ACA627A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B723FC4-92BC-4871-B363-22D3ACA627A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B723FC4-92BC-4871-B363-22D3ACA627A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F13135E4-6280-4DB6-9CA4-A9BA1097D273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F13135E4-6280-4DB6-9CA4-A9BA1097D273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F13135E4-6280-4DB6-9CA4-A9BA1097D273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F13135E4-6280-4DB6-9CA4-A9BA1097D273}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{813E13E1-3B82-4427-B146-D892E65EEF2C} = {FF638996-BDAF-49C4-9B44-4B5FAEC6015A}
 		{03140933-3E93-47B8-9359-6C92C4E5516A} = {FF638996-BDAF-49C4-9B44-4B5FAEC6015A}
 		{8B723FC4-92BC-4871-B363-22D3ACA627A7} = {FF638996-BDAF-49C4-9B44-4B5FAEC6015A}
+		{F13135E4-6280-4DB6-9CA4-A9BA1097D273} = {FF638996-BDAF-49C4-9B44-4B5FAEC6015A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF73E187-3027-460C-9405-BC85ACBDCF53}

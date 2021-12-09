@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PowerAdmin.Common.Configuration
+namespace PowerAdmin.EntityFramework.Configuration.Configuration
 {
     public class ConnectionStringsConfiguration
     {
