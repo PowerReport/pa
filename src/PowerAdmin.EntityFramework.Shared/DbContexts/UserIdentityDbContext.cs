@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using PowerAdmin.EntityFramework.Identity.Entities;
+using PowerAdmin.EntityFramework.Shared.Entities.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PowerAdmin.EntityFramework.Identity.DbContext
+namespace PowerAdmin.EntityFramework.Shared.DbContexts
 {
     public class UserIdentityDbContext : IdentityDbContext<UserIdentity, UserIdentityRole, string, UserIdentityClaim, UserIdentityUserRole, UserIdentityUserLogin, UserIdentityRoleClaim, UserIdentityUserToken>
     {

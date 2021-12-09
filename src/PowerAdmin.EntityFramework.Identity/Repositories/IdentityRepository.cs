@@ -1,5 +1,5 @@
-﻿using PowerAdmin.EntityFramework.Identity.Entities;
-using PowerAdmin.EntityFramework.Identity.Repositories.Interfaces;
+﻿using PowerAdmin.EntityFramework.Identity.Repositories.Interfaces;
+using PowerAdmin.EntityFramework.Shared.Entities.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;

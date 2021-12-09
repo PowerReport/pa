@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerAdmin.Business.Identit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerAdmin.EntityFramework.Postgres", "src\PowerAdmin.EntityFramework.Postgres\PowerAdmin.EntityFramework.Postgres.csproj", "{8B723FC4-92BC-4871-B363-22D3ACA627A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerAdmin.EntityFramework.Configuration", "src\PowerAdmin.EntityFramework.Configuration\PowerAdmin.EntityFramework.Configuration.csproj", "{F13135E4-6280-4DB6-9CA4-A9BA1097D273}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerAdmin.EntityFramework.Configuration", "src\PowerAdmin.EntityFramework.Configuration\PowerAdmin.EntityFramework.Configuration.csproj", "{F13135E4-6280-4DB6-9CA4-A9BA1097D273}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "database", "database", "{3E137F7F-54BD-47B6-97C3-71F0D7477DA1}"
 EndProject
@@ -30,6 +30,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "admin", "admin", "{356191F0-3739-45AA-9C6B-688342D27DF0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerAdmin.Infrastructure", "src\PowerAdmin.Infrastructure\PowerAdmin.Infrastructure.csproj", "{85F4D7DB-FD79-4FF8-9321-3E4611231B2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerAdmin.EntityFramework.Shared", "src\PowerAdmin.EntityFramework.Shared\PowerAdmin.EntityFramework.Shared.csproj", "{A77C1C3F-E6B4-423C-857A-82F7F167D696}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{85F4D7DB-FD79-4FF8-9321-3E4611231B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85F4D7DB-FD79-4FF8-9321-3E4611231B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85F4D7DB-FD79-4FF8-9321-3E4611231B2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A77C1C3F-E6B4-423C-857A-82F7F167D696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A77C1C3F-E6B4-423C-857A-82F7F167D696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A77C1C3F-E6B4-423C-857A-82F7F167D696}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A77C1C3F-E6B4-423C-857A-82F7F167D696}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,6 +92,7 @@ Global
 		{7C50634B-AFC4-459A-9AF6-535B937B9582} = {FF638996-BDAF-49C4-9B44-4B5FAEC6015A}
 		{356191F0-3739-45AA-9C6B-688342D27DF0} = {FF638996-BDAF-49C4-9B44-4B5FAEC6015A}
 		{85F4D7DB-FD79-4FF8-9321-3E4611231B2F} = {7C50634B-AFC4-459A-9AF6-535B937B9582}
+		{A77C1C3F-E6B4-423C-857A-82F7F167D696} = {3E137F7F-54BD-47B6-97C3-71F0D7477DA1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF73E187-3027-460C-9405-BC85ACBDCF53}

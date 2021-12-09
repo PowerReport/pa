@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PowerAdmin.EntityFramework.Identity.Entities
+namespace PowerAdmin.EntityFramework.Shared.Entities.Identity
 {
-    public class UserIdentityRole : IdentityRole
+    public class UserIdentityUserRole : IdentityUserRole<string>
     {
     }
 }
