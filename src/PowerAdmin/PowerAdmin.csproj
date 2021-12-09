@@ -7,13 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Furion" Version="3.0.5" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\PowerAdmin.Business.Identity\PowerAdmin.Business.Identity.csproj" />
-    <ProjectReference Include="..\PowerAdmin.Common\PowerAdmin.Common.csproj" />
     <ProjectReference Include="..\PowerAdmin.EntityFramework.Configuration\PowerAdmin.EntityFramework.Configuration.csproj" />
+    <ProjectReference Include="..\PowerAdmin.Infrastructure\PowerAdmin.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

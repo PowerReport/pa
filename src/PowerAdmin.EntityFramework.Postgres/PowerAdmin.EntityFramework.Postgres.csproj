@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PowerAdmin.Common\PowerAdmin.Common.csproj" />
+    <ProjectReference Include="..\PowerAdmin.Infrastructure\PowerAdmin.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
