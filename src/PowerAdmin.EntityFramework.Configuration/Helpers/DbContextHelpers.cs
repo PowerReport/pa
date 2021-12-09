@@ -1,14 +1,14 @@
 ﻿using Furion;
 using Furion.FriendlyException;
 using Microsoft.Extensions.Configuration;
-using PowerAdmin.Common.Configuration;
+using PowerAdmin.EntityFramework.Configuration.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PowerAdmin.Common.Helpers
+namespace PowerAdmin.EntityFramework.Configuration.Helpers
 {
     public static class DbContextHelpers
     {

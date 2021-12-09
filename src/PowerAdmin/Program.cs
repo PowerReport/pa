@@ -1,5 +1,5 @@
+using PowerAdmin.EntityFramework.Configuration.Extensions;
 using PowerAdmin.EntityFramework.Identity.DbContext;
-using PowerAdmin.EntityFramework.Postgres.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +11,7 @@ builder.Inject();
 var services = builder.Services;
 
 // 添加数据库上下文
-services.AddPostgresDbContext<UserIdentityDbContext>();
+services.AddDbContexts<UserIdentityDbContext>();
 
 services.AddControllers();
 
