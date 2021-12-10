@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PowerAdmin.Business.Identity.Dtos.Identity;
 using PowerAdmin.Business.Identity.Services.Interfaces;
 
 namespace PowerAdmin.Controllers
@@ -16,9 +17,9 @@ namespace PowerAdmin.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetProfile()
+        public async Task<ActionResult<UserDto>> GetProfile()
         {
-            return Ok(await identityService.GetProfile(User));
+            return await identityService.GetProfile(User);
         }
     }
 }

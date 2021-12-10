@@ -1,6 +1,7 @@
-﻿using PowerAdmin.Business.Identity.Services.Interfaces;
+﻿using Mapster;
+using PowerAdmin.Business.Identity.Dtos.Identity;
+using PowerAdmin.Business.Identity.Services.Interfaces;
 using PowerAdmin.EntityFramework.Identity.Repositories.Interfaces;
-using PowerAdmin.EntityFramework.Shared.Entities.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,9 +20,11 @@ namespace PowerAdmin.Business.Identity.Services
             this.identityRepository = identityRepository;
         }
 
-        public async Task<UserIdentity> GetProfile(ClaimsPrincipal user)
+        public async Task<UserDto> GetProfile(ClaimsPrincipal principal)
         {
-            return await identityRepository.GetProfile(user);
+            var user = await identityRepository.GetProfile(principal);
+
+            return user.Adapt<UserDto>();
         }
     }
 }
