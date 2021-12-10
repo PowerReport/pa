@@ -15,7 +15,7 @@ var services = builder.Services;
 services.AddDbContexts<UserIdentityDbContext>();
 
 // 添加用户身份服务
-services.AddIdentityServices();
+services.AddIdentityServices<UserIdentityDbContext>();
 
 services.AddControllers();
 

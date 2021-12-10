@@ -1,4 +1,5 @@
-﻿using PowerAdmin.EntityFramework.Identity.Repositories.Interfaces;
+﻿using Microsoft.AspNetCore.Identity;
+using PowerAdmin.EntityFramework.Identity.Repositories.Interfaces;
 using PowerAdmin.EntityFramework.Shared.Entities.Identity;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,16 @@ namespace PowerAdmin.EntityFramework.Identity.Repositories
 {
     public class IdentityRepository : IIdentityRepository
     {
-        public Task<UserIdentity> GetProfile(ClaimsPrincipal user)
+        private readonly UserManager<UserIdentity> userManager;
+
+        public IdentityRepository(UserManager<UserIdentity> userManager)
         {
-            throw new NotImplementedException();
+            this.userManager = userManager;
+        }
+
+        public async Task<UserIdentity> GetProfile(ClaimsPrincipal principal)
+        {
+            return await userManager.GetUserAsync(principal);
         }
     }
 }

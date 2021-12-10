@@ -1,4 +1,4 @@
-﻿using PowerAdmin.EntityFramework.Shared.Entities.Identity;
+﻿using PowerAdmin.Business.Identity.Dtos.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +10,6 @@ namespace PowerAdmin.Business.Identity.Services.Interfaces
 {
     public interface IIdentityService
     {
-        Task<UserIdentity> GetProfile(ClaimsPrincipal user);
+        Task<UserDto> GetProfile(ClaimsPrincipal principal);
     }
 }

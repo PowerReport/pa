@@ -10,6 +10,6 @@ namespace PowerAdmin.EntityFramework.Identity.Repositories.Interfaces
 {
     public interface IIdentityRepository
     {
-        Task<UserIdentity> GetProfile(ClaimsPrincipal user);
+        Task<UserIdentity> GetProfile(ClaimsPrincipal principal);
     }
 }
