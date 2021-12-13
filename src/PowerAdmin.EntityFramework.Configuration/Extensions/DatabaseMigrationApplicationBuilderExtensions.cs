@@ -18,13 +18,13 @@ namespace PowerAdmin.EntityFramework.Configuration.Extensions
         {
             var dbSettings = DbContextHelpers.GetDbSettings();
 
-            switch (dbSettings.Type?.ToLower())
+            switch (dbSettings.Provider?.ToLower())
             {
                 case "postgres":
                     app.PostgresEnsureDatabasesMigrated<TUserIdentityDbContext>();
                     break;
                 default:
-                    throw new ArgumentException(nameof(DbSettingsConfiguration.Type));
+                    throw new ArgumentException(nameof(DbSettingsConfiguration.Provider));
             }
 
             return app;

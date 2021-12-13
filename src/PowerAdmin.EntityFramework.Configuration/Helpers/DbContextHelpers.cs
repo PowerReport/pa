@@ -24,25 +24,13 @@ namespace PowerAdmin.EntityFramework.Configuration.Helpers
             return dbSettingsConfiguration;
         }
 
-        public static ConnectionStringsConfiguration GetConnectionStrings()
-        {
-            var connectionStringsConfiguration = GetDbSettings().ConnectionStrings;
-
-            if (connectionStringsConfiguration == null)
-            {
-                throw Oops.Oh("The \"{0}\" item is missing from the application configuration", nameof(DbSettingsConfiguration.ConnectionStrings));
-            }
-
-            return connectionStringsConfiguration;
-        }
-
         public static string GetUserIdentityDbConnection()
         {
-            var userIdentityDbConnection = GetConnectionStrings().UserIdentityDbConnection;
+            var userIdentityDbConnection = App.Configuration.GetConnectionString("UserIdentityDbConnection");
 
             if (userIdentityDbConnection == null)
             {
-                throw Oops.Oh("The \"{0}\" item is missing from the application configuration", nameof(ConnectionStringsConfiguration.UserIdentityDbConnection));
+                throw Oops.Oh("The \"UserIdentityDbConnection\" item is missing from the application configuration");
             }
 
             return userIdentityDbConnection;
