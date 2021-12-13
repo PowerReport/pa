@@ -9,18 +9,16 @@ builder.Inject();
 
 // Add services to the container.
 
-var services = builder.Services;
-
 // 添加数据库上下文
-services.AddDbContexts<UserIdentityDbContext>();
+builder.Services.AddDbContexts<UserIdentityDbContext>();
 
 // 添加用户身份服务
-services.AddIdentityServices<UserIdentityDbContext>();
+builder.Services.AddIdentityServices<UserIdentityDbContext>();
 
-services.AddControllers();
+builder.Services.AddControllers();
 
 // 添加 Furion 服务
-services.AddInject();
+builder.Services.AddInject();
 
 var app = builder.Build();
 
