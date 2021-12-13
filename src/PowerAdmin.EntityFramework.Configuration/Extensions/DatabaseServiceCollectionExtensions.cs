@@ -20,13 +20,13 @@ namespace PowerAdmin.EntityFramework.Configuration.Extensions
 
             var userIdentityDbConnection = DbContextHelpers.GetUserIdentityDbConnection();
 
-            switch (dbSettings.Type?.ToLower())
+            switch (dbSettings.Provider?.ToLower())
             {
                 case "postgres":
                     services.AddPostgresDbContexts<TUserIdentityDbContext>(userIdentityDbConnection);
                     break;
                 default:
-                    throw new ArgumentException(nameof(DbSettingsConfiguration.Type));
+                    throw new ArgumentException(nameof(DbSettingsConfiguration.Provider));
             }
 
             return services;

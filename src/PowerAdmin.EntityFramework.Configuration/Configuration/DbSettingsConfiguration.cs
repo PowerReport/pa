@@ -8,8 +8,6 @@ namespace PowerAdmin.EntityFramework.Configuration.Configuration
 {
     public class DbSettingsConfiguration
     {
-        public string? Type { get; set; }
-
-        public ConnectionStringsConfiguration? ConnectionStrings { get; set; }
+        public string? Provider { get; set; }
     }
 }
