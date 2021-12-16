@@ -30,6 +30,7 @@ app.EnsureDatabasesMigrated<UserIdentityDbContext>();
 // 使用静态文件，默认路径是 wwwroot
 app.UseDefaultFiles();
 app.UseStaticFiles();
+app.UseBlazorFrameworkFiles();
 
 app.UseAuthorization();
 
