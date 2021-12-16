@@ -1,0 +1,65 @@
+﻿@namespace PowerAdmin.UI
+@using Microsoft.Extensions.Options
+@using PowerAdmin.UI.Models
+@inherits LayoutComponentBase
+
+<AntDesign.ProLayout.BasicLayout
+    Logo="_appSetting?.Logo"
+    MenuData="_menuData">
+    <ChildContent>
+        @Body
+    </ChildContent>
+    <FooterRender>
+        <FooterView Copyright="@_appSetting?.Copyright" Links="_links"></FooterView>
+    </FooterRender>
+</AntDesign.ProLayout.BasicLayout>
+<SettingDrawer />
+
+@code
+{
+    [Inject]
+    public IOptions<AppSettings>? Options { get; init; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        if (Options != null)
+        {
+            _appSetting = Options.Value;
+        }
+    }
+
+    private AppSettings? _appSetting;
+
+    private readonly MenuDataItem[] _menuData =
+    {
+        new MenuDataItem
+        {
+            Path = "/",
+            Name = "Dashboard",
+            Key = "home",
+            Icon = "home",
+            Children = new MenuDataItem[]
+            {
+                new MenuDataItem
+                {
+                    Path = "/",
+                    Name = "Analysis",
+                    Key = "analysis"
+                }
+            }
+        }
+    };
+
+    private readonly LinkItem[] _links =
+    {
+        new LinkItem
+        {
+            Key = "github",
+            Title = (RenderFragment)(@<Icon Type="github"></Icon>),
+            Href = "https://github.com/PowerReport/pa",
+            BlankTarget = true
+        }
+    };
+}

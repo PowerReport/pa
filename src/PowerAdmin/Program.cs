@@ -4,34 +4,38 @@ using PowerAdmin.EntityFramework.Shared.DbContexts;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ÅäÖÃ Furion
+// é…ç½® Furion
 builder.Inject();
 
 // Add services to the container.
 
-// Ìí¼ÓÊı¾İ¿âÉÏÏÂÎÄ
+// æ·»åŠ æ•°æ®åº“ä¸Šä¸‹æ–‡
 builder.Services.AddDbContexts<UserIdentityDbContext>();
 
-// Ìí¼ÓÓÃ»§Éí·İ·şÎñ
+// æ·»åŠ ç”¨æˆ·èº«ä»½æœåŠ¡
 builder.Services.AddIdentityServices<UserIdentityDbContext>();
 
 builder.Services.AddControllers();
 
-// Ìí¼Ó Furion ·şÎñ
+// æ·»åŠ  Furion æœåŠ¡
 builder.Services.AddInject();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 
-// Êı¾İ¿âÇ¨ÒÆ
+// æ•°æ®åº“è¿ç§»
 app.EnsureDatabasesMigrated<UserIdentityDbContext>();
+
+// ä½¿ç”¨é™æ€æ–‡ä»¶ï¼Œé»˜è®¤è·¯å¾„æ˜¯ wwwroot
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 app.UseAuthorization();
 
-// Ê¹ÓÃ Furion ÖĞ¼ä¼ş
+// ä½¿ç”¨ Furion ä¸­é—´ä»¶
 app.UseInject("api");
 
 app.MapControllers();
 
-app.Run();
+await app.RunAsync();
