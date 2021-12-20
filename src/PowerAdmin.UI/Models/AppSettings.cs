@@ -2,7 +2,7 @@
 
 namespace PowerAdmin.UI.Models;
 
-public class AppSettings : ProSettings
+public class AppSettings
 {
     public string? Logo { get; set; }
 
