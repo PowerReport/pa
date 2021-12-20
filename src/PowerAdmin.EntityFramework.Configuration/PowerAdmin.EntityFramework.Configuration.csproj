@@ -5,10 +5,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  
+  <ItemGroup>
+	<PackageReference Include="Furion" Version="3.0.5" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\PowerAdmin.EntityFramework.Postgres\PowerAdmin.EntityFramework.Postgres.csproj" />
-    <ProjectReference Include="..\PowerAdmin.Infrastructure\PowerAdmin.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

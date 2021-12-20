@@ -5,10 +5,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  
+  <ItemGroup>
+	<PackageReference Include="Furion" Version="3.0.5" />
+	<PackageReference Include="Furion.Extras.ObjectMapper.Mapster" Version="3.0.5" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\PowerAdmin.EntityFramework.Identity\PowerAdmin.EntityFramework.Identity.csproj" />
-    <ProjectReference Include="..\PowerAdmin.Infrastructure\PowerAdmin.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
