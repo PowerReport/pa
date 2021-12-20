@@ -18,7 +18,6 @@
     <ProjectReference Include="..\PowerAdmin.Business.Identity\PowerAdmin.Business.Identity.csproj" />
     <ProjectReference Include="..\PowerAdmin.EntityFramework.Configuration\PowerAdmin.EntityFramework.Configuration.csproj" />
     <ProjectReference Include="..\PowerAdmin.EntityFramework.Shared\PowerAdmin.EntityFramework.Shared.csproj" />
-    <ProjectReference Include="..\PowerAdmin.Infrastructure\PowerAdmin.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
