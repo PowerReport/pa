@@ -7,6 +7,9 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// 添加配置文件
+builder.Configuration.AddJsonFile("identity_data.json");
+
 // 配置 Furion
 builder.Inject();
 // 配置 Serilog
@@ -43,6 +46,8 @@ var app = builder.Build();
 
 // 使用数据库迁移
 app.EnsureDatabasesMigrated<UserIdentityDbContext>();
+// 使用初始化管理员账号
+await app.EnsureSeedIdentityData();
 
 // 使用静态文件，默认路径是 wwwroot
 app.UseDefaultFiles();
