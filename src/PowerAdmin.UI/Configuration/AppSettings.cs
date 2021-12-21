@@ -1,6 +1,6 @@
 ﻿using AntDesign.ProLayout;
 
-namespace PowerAdmin.UI.Models;
+namespace PowerAdmin.UI.Configuration;
 
 public class AppSettings
 {

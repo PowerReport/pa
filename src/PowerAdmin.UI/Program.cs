@@ -1,7 +1,7 @@
 using AntDesign.ProLayout;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using PowerAdmin.UI;
-using PowerAdmin.UI.Models;
+using PowerAdmin.UI.Configuration;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
