@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PowerAdmin.UI.Models.Base;
 
-namespace PowerAdmin.Business.Identity.Dtos.Identity.Base
+namespace PowerAdmin.UI.Models
 {
-    public class UserDto<TUserId> : BaseUserDto<TUserId>
+    public class User : BaseUser<string>
     {
         /// <summary>
         /// 用户名

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Furion.DatabaseAccessor;
+using Microsoft.AspNetCore.Identity;
 using PowerAdmin.EntityFramework.Identity.Repositories.Interfaces;
 using PowerAdmin.EntityFramework.Shared.Entities.Identity;
 using System;
@@ -22,6 +23,18 @@ namespace PowerAdmin.EntityFramework.Identity.Repositories
         public async Task<UserIdentity> GetProfile(ClaimsPrincipal principal)
         {
             return await userManager.GetUserAsync(principal);
+        }
+
+        public async Task<PagedList<UserIdentity>> GetUsers(string? search, int pageIndex = 1, int pageSize = 10)
+        {
+            var userQueryable = userManager.Users;
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                userQueryable = userQueryable.Where(x => x.UserName.Contains(search) || x.Email.Contains(search) || x.PhoneNumber.Contains(search));
+            }
+
+            return await userQueryable.ToPagedListAsync(pageIndex, pageSize);
         }
     }
 }

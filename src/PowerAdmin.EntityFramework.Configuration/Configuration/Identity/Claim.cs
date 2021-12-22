@@ -8,8 +8,8 @@ namespace PowerAdmin.EntityFramework.Configuration.Configuration.Identity
 {
     public class Claim
     {
-        public string Type { get; set; } = string.Empty;
+        public string Type { get; set; } = default!;
 
-        public string Value { get; set; } = string.Empty;
+        public string Value { get; set; } = default!;
     }
 }

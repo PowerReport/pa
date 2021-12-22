@@ -11,5 +11,7 @@ namespace PowerAdmin.EntityFramework.Identity.Repositories.Interfaces
     public interface IIdentityRepository
     {
         Task<UserIdentity> GetProfile(ClaimsPrincipal principal);
+
+        Task<PagedList<UserIdentity>> GetUsers(string? search, int pageIndex = 1, int pageSize = 10);
     }
 }
