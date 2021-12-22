@@ -11,6 +11,6 @@ namespace PowerAdmin.Business.Identity.Dtos.Identity.Base
         /// <summary>
         /// 用户的唯一标识
         /// </summary>
-        public TUserId Id { get; set; }
+        public TUserId Id { get; set; } = default!;
     }
 }

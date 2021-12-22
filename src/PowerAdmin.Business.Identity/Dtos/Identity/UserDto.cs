@@ -9,8 +9,5 @@ namespace PowerAdmin.Business.Identity.Dtos.Identity
 {
     public class UserDto : UserDto<string>
     {
-        public UserDto(string userName) : base(userName)
-        {
-        }
     }
 }

@@ -8,7 +8,7 @@ namespace PowerAdmin.EntityFramework.Configuration.Configuration.Identity
 {
     public class User
     {
-        public string Username { get; set; } = string.Empty;
+        public string Username { get; set; } = default!;
 
         public string? Password { get; set; }
 

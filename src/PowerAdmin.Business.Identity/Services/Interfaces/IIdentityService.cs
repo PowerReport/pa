@@ -11,5 +11,7 @@ namespace PowerAdmin.Business.Identity.Services.Interfaces
     public interface IIdentityService
     {
         Task<UserDto> GetProfile(ClaimsPrincipal principal);
+
+        Task<PagedList<UserDto>> GetUsers(string? search, int pageIndex = 1, int pageSize = 10);
     }
 }

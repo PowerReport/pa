@@ -8,7 +8,7 @@ namespace PowerAdmin.EntityFramework.Configuration.Configuration.Identity
 {
     public class Role
     {
-        public string Name { get; set; } = string.Empty;
+        public string Name { get; set; } = default!;
 
         public List<Claim> Claims { get; set; } = new List<Claim>();
     }

@@ -1,6 +1,6 @@
 ﻿@namespace PowerAdmin.UI
 @using Microsoft.Extensions.Options
-@using PowerAdmin.UI.Configuration
+@using PowerAdmin.UI.Common.Configuration
 @inherits LayoutComponentBase
 @inject IOptions<AppSettings> AppSettingsOptions
 
@@ -22,7 +22,7 @@
     {
         new MenuDataItem
         {
-            Path = "/",
+            Path = "/dashboard",
             Name = "Dashboard",
             Key = "dashboard",
             Icon = "dashboard",
@@ -35,6 +35,13 @@
                     Key = "analysis"
                 }
             }
+        },
+        new MenuDataItem
+        {
+            Path = "/user",
+            Name = "User",
+            Key = "user",
+            Icon = "user"
         }
     };
 

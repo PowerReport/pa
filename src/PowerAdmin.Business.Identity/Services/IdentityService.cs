@@ -26,5 +26,12 @@ namespace PowerAdmin.Business.Identity.Services
 
             return user.Adapt<UserDto>();
         }
+
+        public async Task<PagedList<UserDto>> GetUsers(string? search, int pageIndex = 1, int pageSize = 10)
+        {
+            var users = await identityRepository.GetUsers(search, pageIndex, pageSize);
+
+            return users.Adapt<PagedList<UserDto>>();
+        }
     }
 }
