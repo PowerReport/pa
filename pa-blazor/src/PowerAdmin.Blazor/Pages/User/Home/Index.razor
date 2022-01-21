@@ -1,0 +1,34 @@
+﻿@page "/user"
+@using PowerAdmin.Blazor.Common.Models
+@using PowerAdmin.Blazor.Models
+@using PowerAdmin.Blazor.Services
+
+<PageContainer Title="@("User Management")">
+    <ChildContent>
+        <Card>
+            <Table
+                DataSource="_users.Items"
+                PageIndex="_users.PageIndex"
+                PageSize="_users.PageSize"
+                Total="_users.TotalCount">
+                <AntDesign.Column Title="@("Username")" @bind-Field="@context.UserName"></AntDesign.Column>
+                <AntDesign.Column Title="@("Email")" @bind-Field="@context.Email"></AntDesign.Column>
+                <AntDesign.Column Title="@("Phone Number")" @bind-Field="@context.PhoneNumber"></AntDesign.Column>
+            </Table>
+        </Card>
+    </ChildContent>
+</PageContainer>
+
+@code {
+    [Inject]
+    public IUserApi UserApi { get; init; } = default!;
+
+    private PagedList<User> _users = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        _users = await UserApi.GetUsers();
+    }
+}
