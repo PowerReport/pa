@@ -13,5 +13,7 @@ namespace PowerAdmin.Domain.User.Services.Interfaces
         Task<UserIdentity> GetProfile(ClaimsPrincipal principal);
 
         Task<PagedList<UserIdentity>> GetUsers(string? search, int pageIndex = 1, int pageSize = 10);
+
+        Task<UserIdentity> GetUser(string id);
     }
 }

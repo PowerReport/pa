@@ -28,5 +28,10 @@ namespace PowerAdmin.Domain.User.Services
         {
             return await userRepository.GetUsers(search, pageIndex, pageSize);
         }
+
+        public async Task<UserIdentity> GetUser(string id)
+        {
+            return await userRepository.GetUser(id);
+        }
     }
 }

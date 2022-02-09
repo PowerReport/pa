@@ -21,5 +21,11 @@ namespace PowerAdmin.Admin.Controllers
         {
             return await identityService.GetUsers(search, pageIndex, pageSize);
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<GetUserCase.Response>> GetUser(string id)
+        {
+            return await identityService.GetUser(id);
+        }
     }
 }
