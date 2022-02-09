@@ -16,17 +16,17 @@ namespace PowerAdmin.EntityFramework.Configuration.Extensions
         public static IServiceCollection AddDbContexts<TUserIdentityDbContext>(this IServiceCollection services)
             where TUserIdentityDbContext : DbContext
         {
-            var dbSettings = DbContextHelpers.GetDbSettings();
+            var dbSettings = DbContextHelpers.GetDatabaseProviderSettings();
 
             var userIdentityDbConnection = DbContextHelpers.GetUserIdentityDbConnection();
 
-            switch (dbSettings.Provider?.ToLower())
+            switch (dbSettings.ProviderType?.ToLower())
             {
                 case "postgres":
                     services.AddPostgresDbContexts<TUserIdentityDbContext>(userIdentityDbConnection);
                     break;
                 default:
-                    throw new ArgumentException(nameof(DbSettingsConfiguration.Provider));
+                    throw new ArgumentException(nameof(DatabaseProviderSettingsConfiguration.ProviderType));
             }
 
             return services;

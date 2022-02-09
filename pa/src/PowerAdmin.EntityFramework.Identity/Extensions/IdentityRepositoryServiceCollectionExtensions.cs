@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PowerAdmin.Domain.User.Repositories;
 using PowerAdmin.EntityFramework.Identity.Repositories;
-using PowerAdmin.EntityFramework.Identity.Repositories.Interfaces;
 using PowerAdmin.EntityFramework.Shared.Entities.Identity;
 using System;
 using System.Collections.Generic;
@@ -24,7 +24,7 @@ namespace PowerAdmin.EntityFramework.Identity.Extensions
                 .AddEntityFrameworkStores<TUserIdentityDbContext>();
 
             // 添加用户身份的仓储服务
-            services.AddScoped<IIdentityRepository, IdentityRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
             return services;
         }

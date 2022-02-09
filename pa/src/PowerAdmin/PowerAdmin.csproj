@@ -17,8 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PowerAdmin.Business.Identity\PowerAdmin.Business.Identity.csproj" />
+    <ProjectReference Include="..\PowerAdmin.Admin\PowerAdmin.Admin.csproj" />
+    <ProjectReference Include="..\PowerAdmin.Domain\PowerAdmin.Domain.csproj" />
     <ProjectReference Include="..\PowerAdmin.EntityFramework.Configuration\PowerAdmin.EntityFramework.Configuration.csproj" />
+    <ProjectReference Include="..\PowerAdmin.EntityFramework.Identity\PowerAdmin.EntityFramework.Identity.csproj" />
     <ProjectReference Include="..\PowerAdmin.EntityFramework.Shared\PowerAdmin.EntityFramework.Shared.csproj" />
   </ItemGroup>
 

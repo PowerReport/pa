@@ -1,5 +1,6 @@
-using PowerAdmin.Business.Identity.Extensions;
+using PowerAdmin.Admin.Extensions;
 using PowerAdmin.EntityFramework.Configuration.Extensions;
+using PowerAdmin.EntityFramework.Identity.Extensions;
 using PowerAdmin.EntityFramework.Shared.DbContexts;
 using Serilog;
 using Serilog.Events;
@@ -32,13 +33,26 @@ builder.WebHost.UseSerilogDefault(options =>
 // 注册数据库上下文
 builder.Services.AddDbContexts<UserIdentityDbContext>();
 
+// 添加用户身份的仓储相关服务
+builder.Services.AddIdentityRepository<UserIdentityDbContext>();
+
 // 注册用户身份服务
-builder.Services.AddIdentityServices<UserIdentityDbContext>();
+builder.Services.AddIdentityApplicationServices();
 
 builder.Services.AddControllers();
 
 // 注册 Furion 服务
-builder.Services.AddInject();
+builder.Services.AddInject(options =>
+{
+    options.SpecificationDocumentConfigure = config =>
+    {
+        config.SwaggerGenConfigure = swaggerConfig =>
+        {
+            // 由于 Usecases 使用了嵌套类，会导致 Swagger 的重名报错，如果是嵌套类则加上嵌套类的名称
+            swaggerConfig.CustomSchemaIds(selector => selector.DeclaringType?.Name + selector.Name);
+        };
+    };
+});
 
 var app = builder.Build();
 
