@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PowerAdmin.Business.Identity.Dtos.Identity;
-using PowerAdmin.Business.Identity.Services.Interfaces;
+using PowerAdmin.Admin.Services.Interfaces;
+using PowerAdmin.Admin.Usecases.User;
 
-namespace PowerAdmin.Controllers
+namespace PowerAdmin.Admin.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -17,7 +17,7 @@ namespace PowerAdmin.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<PagedList<UserDto>>> GetUsers(string? search, int pageIndex = 1, int pageSize = 10)
+        public async Task<ActionResult<PagedList<GetUsersCase.Response>>> GetUsers(string? search, int pageIndex = 1, int pageSize = 10)
         {
             return await identityService.GetUsers(search, pageIndex, pageSize);
         }

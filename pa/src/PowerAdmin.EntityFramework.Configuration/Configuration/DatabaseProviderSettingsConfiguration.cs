@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace PowerAdmin.EntityFramework.Configuration.Configuration
 {
-    public class DbSettingsConfiguration
+    public class DatabaseProviderSettingsConfiguration
     {
-        public string? Provider { get; set; }
+        public string? ProviderType { get; set; }
     }
 }

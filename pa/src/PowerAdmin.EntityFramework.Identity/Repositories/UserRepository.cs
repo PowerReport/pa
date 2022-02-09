@@ -1,6 +1,6 @@
 ﻿using Furion.DatabaseAccessor;
 using Microsoft.AspNetCore.Identity;
-using PowerAdmin.EntityFramework.Identity.Repositories.Interfaces;
+using PowerAdmin.Domain.User.Repositories;
 using PowerAdmin.EntityFramework.Shared.Entities.Identity;
 using System;
 using System.Collections.Generic;
@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace PowerAdmin.EntityFramework.Identity.Repositories
 {
-    public class IdentityRepository : IIdentityRepository
+    public class UserRepository : IUserRepository
     {
         private readonly UserManager<UserIdentity> userManager;
 
-        public IdentityRepository(UserManager<UserIdentity> userManager)
+        public UserRepository(UserManager<UserIdentity> userManager)
         {
             this.userManager = userManager;
         }

@@ -22,15 +22,15 @@ namespace PowerAdmin.EntityFramework.Configuration.Extensions
         public static IApplicationBuilder EnsureDatabasesMigrated<TUserIdentityDbContext>(this IApplicationBuilder app)
             where TUserIdentityDbContext : DbContext
         {
-            var dbSettings = DbContextHelpers.GetDbSettings();
+            var dbSettings = DbContextHelpers.GetDatabaseProviderSettings();
 
-            switch (dbSettings.Provider?.ToLower())
+            switch (dbSettings.ProviderType?.ToLower())
             {
                 case "postgres":
                     app.PostgresEnsureDatabasesMigrated<TUserIdentityDbContext>();
                     break;
                 default:
-                    throw new ArgumentException(nameof(DbSettingsConfiguration.Provider));
+                    throw new ArgumentException(nameof(DatabaseProviderSettingsConfiguration.ProviderType));
             }
 
             return app;

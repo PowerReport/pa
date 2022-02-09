@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PowerAdmin.Business.Identity.Dtos.Identity;
-using PowerAdmin.Business.Identity.Services.Interfaces;
+using PowerAdmin.Admin.Services.Interfaces;
+using PowerAdmin.Admin.Usecases.Profile;
 
-namespace PowerAdmin.Controllers
+namespace PowerAdmin.Admin.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -17,7 +17,7 @@ namespace PowerAdmin.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<UserDto>> GetProfile()
+        public async Task<ActionResult<GetProfileCase.Response>> GetProfile()
         {
             return await identityService.GetProfile(User);
         }

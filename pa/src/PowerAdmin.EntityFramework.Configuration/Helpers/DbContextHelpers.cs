@@ -12,16 +12,16 @@ namespace PowerAdmin.EntityFramework.Configuration.Helpers
 {
     public static class DbContextHelpers
     {
-        public static DbSettingsConfiguration GetDbSettings()
+        public static DatabaseProviderSettingsConfiguration GetDatabaseProviderSettings()
         {
-            var dbSettingsConfiguration = App.Configuration.GetSection("DbSettings").Get<DbSettingsConfiguration>();
+            var providerSettings = App.Configuration.GetSection("DatabaseProviderSettings").Get<DatabaseProviderSettingsConfiguration>();
 
-            if (dbSettingsConfiguration == null)
+            if (providerSettings == null)
             {
-                throw Oops.Oh("The \"DbSettings\" item is missing from the application configuration");
+                throw Oops.Oh("The \"DatabaseProviderSettings\" item is missing from the application configuration");
             }
 
-            return dbSettingsConfiguration;
+            return providerSettings;
         }
 
         public static string GetUserIdentityDbConnection()
