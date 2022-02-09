@@ -6,9 +6,9 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PowerAdmin.EntityFramework.Identity.Repositories.Interfaces
+namespace PowerAdmin.Domain.User.Repositories
 {
-    public interface IIdentityRepository
+    public interface IUserRepository
     {
         Task<UserIdentity> GetProfile(ClaimsPrincipal principal);
 
