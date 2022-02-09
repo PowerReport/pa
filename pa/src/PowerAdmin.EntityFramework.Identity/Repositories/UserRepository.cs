@@ -36,5 +36,10 @@ namespace PowerAdmin.EntityFramework.Identity.Repositories
 
             return await userQueryable.ToPagedListAsync(pageIndex, pageSize);
         }
+
+        public async Task<UserIdentity> GetUser(string id)
+        {
+            return await userManager.FindByIdAsync(id);
+        }
     }
 }

@@ -34,5 +34,12 @@ namespace PowerAdmin.Admin.Services
 
             return users.Adapt<PagedList<GetUsersCase.Response>>();
         }
+
+        public async Task<GetUserCase.Response> GetUser(string id)
+        {
+            var user = await userService.GetUser(id);
+
+            return user.Adapt<GetUserCase.Response>();
+        }
     }
 }
