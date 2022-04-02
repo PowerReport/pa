@@ -27,5 +27,11 @@ namespace PowerAdmin.Admin.Controllers
         {
             return await identityService.GetUser(id);
         }
+
+        [HttpPost]
+        public async Task<ActionResult<CreateUserCase.Response>> Create([FromBody] CreateUserCase.Request request)
+        {
+            return await identityService.CreateUser(request);
+        }
     }
 }

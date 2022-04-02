@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using PowerAdmin.Admin.Services;
 using PowerAdmin.Admin.Services.Interfaces;
+using PowerAdmin.Domain.User.Factories;
 using PowerAdmin.Domain.User.Services;
 using PowerAdmin.Domain.User.Services.Interfaces;
 using System;
@@ -17,6 +18,7 @@ namespace PowerAdmin.Admin.Extensions
         {
             // 添加用户身份的领域服务
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserFactory, UserFactory>();
 
             // 添加用户身份的业务服务
             services.AddScoped<IIdentityService, IdentityService>();
