@@ -1,5 +1,7 @@
 ﻿using Furion.DatabaseAccessor;
+using Furion.FriendlyException;
 using Microsoft.AspNetCore.Identity;
+using PowerAdmin.Domain.User.Models;
 using PowerAdmin.Domain.User.Repositories;
 using PowerAdmin.EntityFramework.Shared.Entities.Identity;
 using System;
@@ -25,7 +27,7 @@ namespace PowerAdmin.EntityFramework.Identity.Repositories
             return await userManager.GetUserAsync(principal);
         }
 
-        public async Task<PagedList<UserIdentity>> GetUsers(string? search, int pageIndex = 1, int pageSize = 10)
+        public async Task<PagedList<UserIdentity>> GetAll(string? search, int pageIndex = 1, int pageSize = 10)
         {
             var userQueryable = userManager.Users;
 
@@ -37,9 +39,36 @@ namespace PowerAdmin.EntityFramework.Identity.Repositories
             return await userQueryable.ToPagedListAsync(pageIndex, pageSize);
         }
 
-        public async Task<UserIdentity> GetUser(string id)
+        public async Task<UserIdentity> Get(string id)
         {
             return await userManager.FindByIdAsync(id);
+        }
+
+        public async Task<UserIdentity> Get(UserName userName)
+        {
+            return await userManager.FindByNameAsync(userName);
+        }
+
+        public async Task<UserIdentity> Get(Email email)
+        {
+            return await userManager.FindByEmailAsync(email);
+        }
+
+        public Task<UserIdentity> Get(PhoneNumber phoneNumber)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<UserIdentity> Add(UserIdentity user, string password)
+        {
+            var identityResult = await userManager.CreateAsync(user, password);
+
+            if (!identityResult.Succeeded)
+            {
+                throw Oops.Oh("新增用户失败: {0}!", identityResult.Errors.Select(p => p.Description));
+            }
+
+            return user;
         }
     }
 }
