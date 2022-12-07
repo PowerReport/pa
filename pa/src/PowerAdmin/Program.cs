@@ -70,7 +70,7 @@ app.UseBlazorFrameworkFiles();
 
 app.UseAuthorization();
 
-// 使用 Furion 中间件
+// 使用 Furion 中间件，Swagger 的路由为 /api
 app.UseInject("api");
 
 app.MapControllers();
