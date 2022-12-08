@@ -373,3 +373,5 @@ FodyWeavers.xsd
 # Static files used when debug
 src/PowerAdmin/wwwroot
 
+# MacOS files
+.DS_Store
