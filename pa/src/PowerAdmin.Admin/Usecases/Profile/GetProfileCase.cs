@@ -1,25 +1,22 @@
-﻿using PowerAdmin.Admin.Usecases.User.Base;
+﻿namespace PowerAdmin.Admin.Usecases.Profile;
 
-namespace PowerAdmin.Admin.Usecases.Profile
-{
-    public class GetProfileCase
-    {
-        public class Response : BaseUser<string>
-        {
-            /// <summary>
-            /// 用户名
-            /// </summary>
-            public string UserName { get; set; } = default!;
+using PowerAdmin.Admin.Usecases.User.Base;
 
-            /// <summary>
-            /// 邮箱
-            /// </summary>
-            public string? Email { get; set; }
+public class GetProfileCase {
+  public class Response : BaseUser<string> {
+    /// <summary>
+    /// 用户名
+    /// </summary>
+    public string UserName { get; set; } = default!;
 
-            /// <summary>
-            /// 手机号码
-            /// </summary>
-            public string? PhoneNumber { get; set; }
-        }
-    }
+    /// <summary>
+    /// 邮箱
+    /// </summary>
+    public string? Email { get; set; }
+
+    /// <summary>
+    /// 手机号码
+    /// </summary>
+    public string? PhoneNumber { get; set; }
+  }
 }

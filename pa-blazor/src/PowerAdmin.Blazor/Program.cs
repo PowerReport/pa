@@ -7,13 +7,13 @@ using PowerAdmin.Blazor.Services.Extensions;
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 
-// 注册接口服务
 builder.Services.AddServices(builder.HostEnvironment);
 
 builder.Services.AddAntDesign();
 
-// 载入应用配置项
-builder.Services.Configure<ProSettings>(builder.Configuration.GetSection("ProSettings"));
-builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("App"));
+builder.Services.Configure<ProSettings>(
+    builder.Configuration.GetSection("ProSettings"));
+builder.Services.Configure<AppSettings>(
+    builder.Configuration.GetSection("App"));
 
 await builder.Build().RunAsync();

@@ -1,12 +1,9 @@
-﻿using System;
+﻿namespace PowerAdmin.EntityFramework.Postgres.Helpers;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PowerAdmin.EntityFramework.Postgres.Helpers
-{
-    public class MigrationAssembly
-    {
-    }
-}
+public class MigrationAssembly {}

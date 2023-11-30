@@ -1,13 +1,8 @@
 using Xunit;
 
-namespace PowerAdmin.UnitTests
-{
-    public class UnitTest1
-    {
-        [Fact]
-        public void Test1()
-        {
-
-        }
-    }
+namespace PowerAdmin.UnitTests {
+public class UnitTest1 {
+  [Fact]
+  public void Test1() {}
+}
 }

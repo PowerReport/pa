@@ -1,26 +1,23 @@
-﻿using Refit;
+﻿namespace PowerAdmin.Blazor.Common.RemoteRequest.Extensions;
 
-namespace PowerAdmin.Blazor.Common.RemoteRequest.Extensions
-{
-    public static class RemoteRequestServiceCollectionExtensions
-    {
-        public static IServiceCollection AddRemoteRequest<IApi>(this IServiceCollection services, Action<RemoteRequestOptions> options) where IApi : class
-        {
-            var remoteRequestOptions = new RemoteRequestOptions();
-            options.Invoke(remoteRequestOptions);
+using Refit;
 
-            services.AddRefitClient<IApi>()
-                .ConfigureHttpClient(httpClient =>
-                {
-                    httpClient.BaseAddress = new Uri(remoteRequestOptions.BaseAddress);
-                });
+public static class RemoteRequestServiceCollectionExtensions {
+  public static IServiceCollection
+  AddRemoteRequest<IApi>(this IServiceCollection services,
+                         Action<RemoteRequestOptions> options)
+      where IApi : class {
+    var remoteRequestOptions = new RemoteRequestOptions();
+    options.Invoke(remoteRequestOptions);
 
-            return services;
-        }
-    }
+    services.AddRefitClient<IApi>().ConfigureHttpClient(httpClient => {
+      httpClient.BaseAddress = new Uri(remoteRequestOptions.BaseAddress);
+    });
 
-    public class RemoteRequestOptions
-    {
-        public string BaseAddress { get; set; } = default!;
-    }
+    return services;
+  }
+}
+
+public class RemoteRequestOptions {
+  public string BaseAddress { get; set; } = default!;
 }
