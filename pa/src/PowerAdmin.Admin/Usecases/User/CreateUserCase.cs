@@ -17,12 +17,12 @@ public class CreateUserCase {
     /// <summary>
     /// 邮箱
     /// </summary>
-    public string Email { get; set; }
+    public string? Email { get; set; }
 
     /// <summary>
     /// 手机号码
     /// </summary>
-    public string PhoneNumber { get; set; }
+    public string? PhoneNumber { get; set; }
 
     /// <summary>
     /// 是否启用双重身份认证
@@ -49,12 +49,12 @@ public class CreateUserCase {
     /// <summary>
     /// 邮箱
     /// </summary>
-    public string Email { get; set; }
+    public string? Email { get; set; }
 
     /// <summary>
     /// 手机号码
     /// </summary>
-    public string PhoneNumber { get; set; }
+    public string? PhoneNumber { get; set; }
 
     /// <summary>
     /// 是否启用双重身份认证

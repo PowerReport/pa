@@ -14,7 +14,7 @@ builder.Configuration.AddJsonFile("identity_data.json");
 // 配置 Furion
 builder.Inject();
 // 配置 Serilog
-builder.WebHost.UseSerilogDefault(options => {
+builder.UseSerilogDefault(options => {
 #if DEBUG
   options.MinimumLevel
       .Debug()
@@ -47,14 +47,12 @@ builder.Services.AddControllers();
 
 // 注册 Furion 服务
 builder.Services.AddInject(options => {
-  options.SpecificationDocumentConfigure = config => {
-    config.SwaggerGenConfigure = swaggerConfig => {
-      // 由于 Usecases 使用了嵌套类，会导致 Swagger
-      // 的重名报错，如果是嵌套类则加上嵌套类的名称
-      swaggerConfig.CustomSchemaIds(selector => selector.DeclaringType?.Name +
-                                                selector.Name);
-    };
-  };
+  options.ConfigureSwaggerGen(config => {
+    // 由于 Usecases 使用了嵌套类，会导致 Swagger
+    // 的重名报错，如果是嵌套类则加上嵌套类的名称
+    config.CustomSchemaIds(selector =>
+                               selector.DeclaringType?.Name + selector.Name);
+  });
 });
 
 var app = builder.Build();
