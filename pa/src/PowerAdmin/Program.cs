@@ -8,6 +8,7 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// -----------------------------------------------------------------------
 // 添加配置文件
 builder.Configuration.AddJsonFile("identity_data.json");
 
@@ -32,8 +33,6 @@ builder.UseSerilogDefault(options => {
                     retainedFileCountLimit: null, encoding: Encoding.UTF8);
 });
 
-// Add services to the container.
-
 // 注册数据库上下文
 builder.Services.AddDbContexts<UserIdentityDbContext>();
 
@@ -55,9 +54,8 @@ builder.Services.AddInject(options => {
   });
 });
 
+// -----------------------------------------------------------------------
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
 
 // 使用数据库迁移
 app.EnsureDatabasesMigrated<UserIdentityDbContext>();
